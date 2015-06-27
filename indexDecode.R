@@ -8,9 +8,9 @@
 
 # set up working directory and file names
 setwd("~/Desktop/index_sorting")    #edit this to your working directory
-fcsFileName <- "Plate2_384w.fcs"        #input FCS file
-outputCSV <- "Plate2_384w_index.csv"    #output index file 
-descriptorCSV <- "Plate2_384w_descriptors.csv"  #output descriptor file
+fcsFileName <- "Plate1_96w.fcs"        #input FCS file
+outputCSV <- "Plate1_96w_index.csv"    #output index file 
+descriptorCSV <- "Plate1_96w_descriptors.csv"  #output descriptor file
 
 # load flowCore package 
 library("flowCore")
