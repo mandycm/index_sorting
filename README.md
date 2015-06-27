@@ -1,6 +1,6 @@
 Extracting Astrios Index Sorting Data
 ======
-This is a script written in R to extract the index-sorting data from the MoFlo-Astrios FCS files. When a plate sort is performed on the Astrios, the well position of a sorted event is recorded. The information is packaged in the Sort Classifier parameter inside the FCS file. The Sort Classifier is a 32-bit parameter, with sort-media X postion stored in bits 21-26 and sort-media Y position stored in bits 27-32. This script is written to extract those bits of information from an Astrios FCS file.
+indexDecode.R a script written in R to extract the index-sorting data from the MoFlo-Astrios FCS files. When a plate sort is performed on the Astrios, the well position of a sorted event is recorded. The information is packaged in the Sort Classifier parameter inside the FCS file. The Sort Classifier is a 32-bit parameter, with sort-media X postion stored in bits 21-26 and sort-media Y position stored in bits 27-32. This script is written to extract those bits of information from an Astrios FCS file.
 
 Here are some examples of sort classifier values. Bits 21-32 are highlighted.
 * An event that is outside of the desired sort gate
@@ -21,7 +21,7 @@ I have included some sample files I used for testing this script:
 - FCS file from a 96-well plate sort (Plate1_96w.fcs). H10-12 are empty in this sort. All other wells have a single cell sorted.
 - Index data output from the 96w plate example (Plate1_96w_index.csv)
 - Header descriptor output from the 96w plate example (Plate1_96w_descriptors.csv)
-- FCS file from a 384-well plate sort (Plate2_384w.fcs). Wells A1, A24, P1, P24 have 10 cells each. All other wells have a single cell sorted. 
+- FCS file from a 384-well plate sort (Plate2_384w.fcs). Wells A1, A24, P1, P24 have 10 cells each. All other wells have a single cell sorted.
 - Index data output from the 96w plate example (Plate2_384w_index.csv)
 - Header descriptor output from the 96w plate example (Plate2_384w_descriptors.csv)
 
