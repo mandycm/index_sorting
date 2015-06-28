@@ -14,6 +14,7 @@ Here are some examples of sort classifier values. Bits 21-32 are highlighted.
 **Data Input**: FCS file from the MoFlo-Astrios
 
 **Data Output**:
+Two CSV files get generated from this script:
 1. CSV file containing well position of a sorted event and its signal in all the recorded parameters
 2. CSV file containing the header information
 
