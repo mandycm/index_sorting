@@ -7,10 +7,10 @@
 ### Mandy Tam <mandycm26@gmail.com>
 
 # set up working directory and file names
-setwd("~/Desktop/index_sorting")    #edit this to your working directory
-fcsFileName <- "Plate1_96w.fcs"        #input FCS file
-outputCSV <- "Plate1_96w_index.csv"    #output index file 
-descriptorCSV <- "Plate1_96w_descriptors.csv"  #output descriptor file
+setwd("~/Desktop/index_sorting")       #edit this to your working directory
+fcsFileName <- "Plate2_384w.fcs"        #input FCS file
+outputCSV <- "Plate2_384w_index.csv"    #output index file 
+descriptorCSV <- "Plate2_384w_descriptors.csv"  #output descriptor file
 
 # load flowCore package 
 library("flowCore")
@@ -19,7 +19,7 @@ library("flowCore")
 myFile <- read.FCS(fcsFileName)
 
 # extract sort classifier data
-sortClassifier <- exprs(myFile)[,c("Sort Classifier")]
+sortClassifier <- exprs(myFile)[, c("Sort Classifier")]
 
 # set up matrix to store sort index X and Y data in columns 1 and 2
 indexData = matrix(nrow=length(sortClassifier), ncol=2)
@@ -40,7 +40,11 @@ cat(colnames(myFile), sep=",")
 cat("\n")
 for (i in 1:nrow(myFile)){
   if (!is.na(indexData[i,1])){
-    cat(paste( c(intToUtf8(indexData[i,2]+64), indexData[i, 1])))
+    if (indexData[i,2] <= 26){  #rows A-Z
+      cat( paste0(c(intToUtf8(indexData[i,2]+64), indexData[i, 1])))
+    } else {  #rows AA-EE for 1536-well plate
+      cat( paste0(c(intToUtf8(indexData[i,2]-26+64), intToUtf8(indexData[i,2]-26+64), indexData[i, 1])))
+    } 
     cat(",")
     for (j in colnames(myFile)){
       cat(exprs(myFile)[,c(j)][i])
