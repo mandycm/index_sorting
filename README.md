@@ -23,8 +23,8 @@ I have included some sample files that I used to test this script:
 - Index data output from the 96w plate example (Plate1_96w_index.csv)
 - Header descriptor output from the 96w plate example (Plate1_96w_descriptors.csv)
 - FCS file from a 384-well plate sort (Plate2_384w.fcs). Wells A1, A24, P1, P24 have 10 cells each. All other wells have a single cell sorted.
-- Index data output from the 96w plate example (Plate2_384w_index.csv)
-- Header descriptor output from the 96w plate example (Plate2_384w_descriptors.csv)
+- Index data output from the 384w plate example (Plate2_384w_index.csv)
+- Header descriptor output from the 384w plate example (Plate2_384w_descriptors.csv)
 
 ## Using the Script
 You need to have the [R](http://www.r-project.org/) and the [Bioconductor-flowCore](http://www.bioconductor.org/packages/release/bioc/html/flowCore.html) package installed.
