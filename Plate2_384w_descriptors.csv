@@ -1,0 +1,22 @@
+flowFrame object 'Plate2_384w.fcs'
+with 229323 cells and 18 observables:
+                name            desc      range minRange   maxRange
+$P1             TIME        Time LSW 4294967296        0 4294967295
+$P2            TIME2        Time MSW 4294967296        0 4294967295
+$P3       FL5-Height      405-448/59 4294967296        0 4294967295
+$P4         FL5-Area      405-448/59 4294967296        0 4294967295
+$P5        FL5-Width      405-448/59 4294967296        0 4294967295
+$P6      FSC1-Height        488-FSC1 4294967296        0 4294967295
+$P7        FSC1-Area        488-FSC1 4294967296        0 4294967295
+$P8       FSC1-Width        488-FSC1 4294967296        0 4294967295
+$P9      SSC2-Height         488-SSC 4294967296        0 4294967295
+$P10       SSC2-Area         488-SSC 4294967296        0 4294967295
+$P11      SSC2-Width         488-SSC 4294967296        0 4294967295
+$P12     FL12-Height      488-795/70 4294967296        0 4294967295
+$P13       FL12-Area      488-795/70 4294967296        0 4294967295
+$P14      FL12-Width      488-795/70 4294967296        0 4294967295
+$P15     FL36-Height      640-671/30 4294967296        0 4294967295
+$P16       FL36-Area      640-671/30 4294967296        0 4294967295
+$P17      FL36-Width      640-671/30 4294967296        0 4294967295
+$P18 Sort Classifier Sort Classifier 4294967296        0 4294967295
+244 keywords are stored in the 'description' slot
