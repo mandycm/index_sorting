@@ -17,7 +17,7 @@ Here are some examples of sort classifier values. Bits 21-32 are highlighted.
 1. CSV file containing well position of a sorted event and its signal in all the recorded parameters
 2. CSV file containing the header information
 
-I have included some sample files I used for testing this script:  
+I have included some sample files that I used to test this script:  
 - FCS file from a 96-well plate sort (Plate1_96w.fcs). H10-12 are empty in this sort. All other wells have a single cell sorted.
 - Index data output from the 96w plate example (Plate1_96w_index.csv)
 - Header descriptor output from the 96w plate example (Plate1_96w_descriptors.csv)
@@ -39,10 +39,10 @@ Run the script. I didn't set up error checking so I would suggest running the sc
 
 ## Known Issues
 1. **File Size Limit**
-  -  I have trouble running the readFCS() command of the FlowCore pacakage on big FCS files. My laptop froze when I tried this on a 1GB file. For Harvard people, you may want to try running this on the Odyssey cluster for big files.
+  -  I have trouble running the readFCS() command of the FlowCore pacakage on big FCS files. My laptop froze when I tried this on a 1GB file. For Harvard people, I am looking into how to run this on the Odyssey cluster.
 2. **Speed**  
-   - Just a disclaimer that the script is rather slow, especially the   block that writes data out as the csv files. It took my aging laptop ~20 seconds to write the outputs in the 384-well plate example.
-3. **Issue with 1536-well plates**
- - I forgot to set up the script to decode for rows AA-EE. I will fix that when I get a chance.
+   - Just a disclaimer that the script is slow, especially the block that writes data out as the csv files. It took my aging laptop ~45 seconds to write the output files in the 384-well plate example (a 16MB FCS file).
+3. **Untested for 1536-well plates**
+ - The script should decode for rows AA-EE for 1536-well plates but I have not tested.
 
 Collaborators are welcome to improve the script and make it more robust. Feel free to contact me for issues.
